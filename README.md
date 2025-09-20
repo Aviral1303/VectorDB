@@ -1,6 +1,6 @@
 # Vector DB API (FastAPI)
 
-A clean, typed REST API to organize text chunks with vector embeddings and perform k-Nearest Neighbors (kNN) search. It is containerized and includes custom index implementations, concurrency controls, optional persistence, and a minimal Python SDK.
+A REST API to organize text chunks with vector embeddings and perform k-Nearest Neighbors (kNN) search. It is containerized and includes custom index implementations, concurrency controls, optional persistence, and a minimal Python SDK.
 
 ### Objective
 - CRUD for Libraries → Documents → Chunks
@@ -140,7 +140,7 @@ pytest -q
 
 ---
 
-## Python SDK (optional)
+## Python SDK 
 ```python
 from sdk.client import VectorDBClient
 
