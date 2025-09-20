@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+
+# Envs
+.env
+.venv/
+venv/
+
+# OS/Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Only include necessary files in build context
+*
+!app/
+!requirements.txt
+!Dockerfile
+!README.md
+!Engineering.md
+!DemoRunbook.md
+!sdk/
+!tests/
