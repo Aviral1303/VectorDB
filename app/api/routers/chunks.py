@@ -24,7 +24,7 @@ def create_chunk(library_id: str, document_id: str, payload: CreateChunkRequest,
 		lib = get_library_repository().get(library_id)
 		embedding = embed_svc.embed_text(payload.text, lib.embedding_dimension)
 	elif embedding is None and not payload.use_embedding_service:
-		raise HTTPException(status_code=400, detail="Embedding required unless use_embedding_service=true")
+		raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Embedding required unless use_embedding_service=true")
 	c = svc.create(library_id, document_id, text=payload.text, embedding=embedding)
 	return ChunkResponse(id=c.id, library_id=c.library_id, document_id=c.document_id, text=c.text)
 
